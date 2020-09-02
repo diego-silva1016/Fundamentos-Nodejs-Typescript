@@ -31,9 +31,7 @@ class TransactionsRepository {
 
     this.transactions.forEach(transaction => {
       if (transaction.type === 'income') income += transaction.value;
-    });
-    this.transactions.forEach(transaction => {
-      if (transaction.type === 'outcome') outcome += transaction.value;
+      else outcome += transaction.value;
     });
 
     total = income - outcome;

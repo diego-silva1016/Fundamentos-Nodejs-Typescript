@@ -18,9 +18,7 @@ var TransactionsRepository = /** @class */ (function () {
         this.transactions.forEach(function (transaction) {
             if (transaction.type === 'income')
                 income += transaction.value;
-        });
-        this.transactions.forEach(function (transaction) {
-            if (transaction.type === 'outcome')
+            else
                 outcome += transaction.value;
         });
         total = income - outcome;
